@@ -1,18 +1,28 @@
-# gentree
-Разбор CSV и формирование JSON tree
-# Gentree
+Программа gentree, написанная на PHP 8.1, генерирует JSON файл на основе входящего CSV файла.
 
-## Установка
+Требования
+PHP 8.1 или выше
+Composer
 
-1. Установите composer: `https://getcomposer.org/download/`
-2. В директории проекта выполните команду: `composer install`
+Установка
+Клонируйте репозиторий:
 
-## Запуск
+git clone https://github.com/infosave2007/gentree.git
+Перейдите в каталог проекта:
 
-1. Создайте объект Gentree: `$gentree = new Gentree\CsvReader::read('path/to/input.csv'));`
-2. Генерируйте JSON дерево: `$jsonTree = $gentree->generateJsonTree();`
-3. Сохраните JSON файл: `file_put_contents('path/to/output.json', $jsonTree);`
+cd gentree
+Установите зависимости с помощью Composer:
 
-## Запуск тестов
+composer install
 
-1. В директории проекта выполните команду: `./vendor/bin/phpunit tests`
+Использование
+Чтобы запустить программу, выполните следующую команду:
+
+php gentree.php input.csv output.json
+где input.csv - путь к входному файлу в формате CSV, а output.json - путь для сохранения выходного JSON файла.
+
+Автор
+Кириченко Олег Юрьевич infosave@mail.ru
+
+Лицензия
+Проект доступен под лицензией MIT.
